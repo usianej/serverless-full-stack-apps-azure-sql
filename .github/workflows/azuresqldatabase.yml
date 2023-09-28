@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: Azure/sql-action@v1.2
         with:
+          server-name: bus-server683749.database.windows.net
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
           # uses dacpac to deploy database schema
           dacpac-package: './database/dacpac/bus-db.dacpac'
